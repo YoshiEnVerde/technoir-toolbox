@@ -1,11 +1,11 @@
-const Eris = require('eris');
-const express = require('express');
+const Eris = require('eris')
+const express = require('express')
 
-var winston = require('winston');
-var auth = require('./auth.json');
-var config = require('./config.json');
-var checkRolls = require('./roll.js');
-var app = express();
+var winston = require('winston')
+var auth = require('./auth.json')
+var config = require('./config.json')
+var checkRolls = require('./roll.js')
+var app = express()
 
 const logger = winston.createLogger({
   level: 'info',
@@ -16,42 +16,41 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'technoir.log', level: 'debug' }),
     new winston.transports.Console({ colorize: true, level: 'info' })
   ]
-});
+})
 
-app.get("/", function(request, response) {
-  response.send("beep");
-});
+app.get('/', function (request, response) {
+  response.send('beep')
+})
 
 // listen for requests :)
 var listener = app.listen(config.port, function () {
-  logger.info('Technoir Discord Bot (With 6s) is listening on port ' + listener.address().port);
-});
+  logger.info('Technoir Discord Bot (With 6s) is listening on port ' + listener.address().port)
+})
 
+const bot = new Eris(auth.token)
 
-const bot = new Eris(auth.token);
-
-bot.on('ready', () => {                                // When the bot is ready
-  logger.debug('Bot running!');                             // Log "Ready!"
-});
+bot.on('ready', () => {
+  logger.debug('Bot running!')
+})
 
 // When a message is created
 bot.on('messageCreate', (msg) => {
   try {
-    logger.debug('Processing message \'' + JSON.stringify(msg.content) + '\'');
-    if(msg.content.match(/^\/roll/)) {
+    logger.debug('Processing message \'' + JSON.stringify(msg.content) + '\'')
+    if (msg.content.match(/^\/roll/)) {
       // If the message content starts with /roll
-      var resultMsg = checkRolls.check(msg.content, config.baseDiff, logger);
+      var resultMsg = checkRolls.check(msg.content, config.baseDiff, logger)
 
-      bot.createMessage(msg.channel.id, resultMsg);
+      bot.createMessage(msg.channel.id, resultMsg)
     } else {
-      logger.debug('Message matches no available token');
+      logger.debug('Message matches no available token')
     }
   } catch (error) {
-    logger.error('Execution error: ' + error.message);
-    logger.error('Stack Trace: ' + error.stack);
-    logger.error('Error details: ' + parse(stringify(error)));
+    logger.error('Execution error: ' + error.message)
+    logger.error('Stack Trace: ' + error.stack)
+    logger.error('Error details: ' + parse(stringify(error)))
   }
-});
+})
 
 // Get the bot to connect to Discord
-bot.connect();
+bot.connect()
