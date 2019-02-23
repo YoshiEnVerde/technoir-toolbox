@@ -1,6 +1,11 @@
 [![Build Status](https://travis-ci.org/YoshiEnVerde/technoir-toolbox.svg?branch=master)](https://travis-ci.org/YoshiEnVerde/technoir-toolbox)
 [![Coverage Status](https://coveralls.io/repos/github/YoshiEnVerde/technoir-toolbox/badge.svg?branch=master)](https://coveralls.io/github/YoshiEnVerde/technoir-toolbox?branch=master)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/YoshiEnVerde/technoir-toolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/YoshiEnVerde/technoir-toolbox/alerts/)
+[![SonarQube Bugs](https://sonarcloud.io/api/project_badges/measure?project=yoshienverde-github%3Atechnoir-toolbox&metric=bugs)](https://sonarcloud.io/dashboard?id=yoshienverde-github%3Atechnoir-toolbox)
+[![SonarQube Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=yoshienverde-github%3Atechnoir-toolbox&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=yoshienverde-github%3Atechnoir-toolbox)
+[![SonarQube Maintainability](https://sonarcloud.io/api/project_badges/measure?project=yoshienverde-github%3Atechnoir-toolbox&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=yoshienverde-github%3Atechnoir-toolbox)
+[![SonarQube Reliability](https://sonarcloud.io/api/project_badges/measure?project=yoshienverde-github%3Atechnoir-toolbox&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=yoshienverde-github%3Atechnoir-toolbox)
+[![SonarQube Security](https://sonarcloud.io/api/project_badges/measure?project=yoshienverde-github%3Atechnoir-toolbox&metric=security_rating)](https://sonarcloud.io/dashboard?id=yoshienverde-github%3Atechnoir-toolbox)
 
 # The Technoir Multipurpose Toolbox (`technoir-toolbox`)
 Multipurpose set of tools for GMing on the Technoir TTRPG system.
