@@ -1,10 +1,11 @@
 {
   "name": "technoir-bot-with-sixes",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Clone of the Technoir Bot dice roller, with a fix that allows for sixes to be rolled, and a more random dice throw",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "eris": "^0.7.2",
@@ -13,5 +14,8 @@
   },
   "engines": {
     "node": "8.x"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.3"
   }
 }
