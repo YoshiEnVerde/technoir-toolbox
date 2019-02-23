@@ -17,6 +17,7 @@
     "node": "8.x"
   },
   "devDependencies": {
-    "coveralls": "^3.0.3"
+    "coveralls": "^3.0.3",
+    "jest": "^24.1.0"
   }
 }
