@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/YoshiEnVerde/technoir-toolbox.svg?branch=master)](https://travis-ci.org/YoshiEnVerde/technoir-toolbox)
+[![Coverage Status](https://coveralls.io/repos/github/YoshiEnVerde/technoir-toolbox/badge.svg?branch=master)](https://coveralls.io/github/YoshiEnVerde/technoir-toolbox?branch=master)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/YoshiEnVerde/technoir-toolbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/YoshiEnVerde/technoir-toolbox/alerts/)
+
 # The Technoir Multipurpose Toolbox (`technoir-toolbox`)
 Multipurpose set of tools for GMing on the Technoir TTRPG system.
 

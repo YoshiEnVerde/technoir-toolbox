@@ -1,4 +1,10 @@
 language: node_js
+dist: trusty
+addons:
+  sonarcloud:
+    organization: "yoshienverde-github"
+#    token:
+#      secure: ********* # encrypted value of your token
 branches:
   only:
   - master
@@ -14,3 +20,4 @@ install:
 script:
 - npm test
 - npm run coveralls
+- sonar-scanner
