@@ -22,4 +22,4 @@ function testEmptyForTravis () {
   }
 }
 
-testEmptyForTravis()
+test.skip('skip', () => {})
