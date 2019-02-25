@@ -1,0 +1,26 @@
+language: node_js
+dist: trusty
+addons:
+  sonarcloud:
+    organization: "yoshienverde-github"
+#    token:
+#      secure: ********* # encrypted value of your token
+branches:
+  only:
+  - master
+  - stable
+  - v0
+cache:
+  directories:
+  - node_modules
+before_install:
+- npm update
+install:
+- npm install
+script:
+- npm test
+- npm run coveralls
+jobs:
+  include:
+    - stage: Produce Coverage
+      script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
