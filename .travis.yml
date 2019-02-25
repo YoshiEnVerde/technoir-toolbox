@@ -20,4 +20,7 @@ install:
 script:
 - npm test
 - npm run coveralls
-- sonar-scanner
+jobs:
+  include:
+    - stage: Produce Coverage
+      script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
